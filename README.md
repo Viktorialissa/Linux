@@ -92,9 +92,38 @@ Nyt asennus lähtee pyörimään ja tässä menee hetki.
 
 ![linuxasennus](https://user-images.githubusercontent.com/112398757/213292663-3d587f46-65de-45dc-b9de-26c0cc44646d.JPG)
 
+Asennuksen valmistuttua lukee näytöllä All done ja voit Done-painiketta ja tarkistaa, että Restart now -kohdassa on täppä paikallaan. Kone käynnistyy uudelleen ja voit laittaa siihen juuri asettamasi käyttäjätunnuksen ja salasanan.
+
+![allDone](https://user-images.githubusercontent.com/112398757/213293611-4b62df20-61d2-4edb-b40b-390d3ab00eb3.JPG)
 
 
+![kaynnistys](https://user-images.githubusercontent.com/112398757/213293641-997681df-1e59-4d5e-b40e-721821491295.JPG)
 
+
+Nyt kone on valmis käytettäväksi ja voit testata toimiiko selain koneellasi. Avaa selain ja laita jokin sivu siihen.
+
+![selaaminen](https://user-images.githubusercontent.com/112398757/213293858-a633a449-4174-4aa1-afcb-669e6033a8a8.JPG)
+
+
+Seuraavaksi avaa terminaali esimerkiksi applications kohdasta ja sieltä terminaali. Aja seuraavat komennot terminaalissa järjestyksessä:
+- sudo apt-get update
+- sudo apt-get -y dist-upgrade
+- sudo apt-get -y install ufw
+- sudo ufw enable.
+
+Kuvassa näkyy ensimmäinen komento:
+
+![terminaali](https://user-images.githubusercontent.com/112398757/213294038-400b9a35-2d4d-4960-9d5f-7013aeb4aa91.JPG)
+
+
+Joudut laittamaan salasanasi ajaessa komentoja. Se ei tule näkyviin vaan kirjoitat sen ja painat enteriä.
+
+![terminaali2](https://user-images.githubusercontent.com/112398757/213294719-5fba68d5-5a33-4e07-bea6-67d461f7f936.JPG)
+
+
+Ensimmäisen komennon mentyä läpi voit laittaa seuraavan, kun terminaali näyttää jotakuinkin tältä:
+
+![terminaali3](https://user-images.githubusercontent.com/112398757/213294900-669b3c94-8840-4c9c-a643-8e6ac4110d1e.JPG)
 
 
 

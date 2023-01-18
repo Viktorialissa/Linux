@@ -16,7 +16,7 @@ Install Debian 11-Bullseye virtual machine in VirtulBox
 Lataa Debian 11-Bullseye [Debianin sivulta](https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/current-live/amd64/iso-hybrid/).
 Valitse versio:
 
-  ![debian](https://user-images.githubusercontent.com/112398757/213287022-89a2cc06-e1dd-49c0-a770-be7ca019ebac.JPG)
+    ![debian](https://user-images.githubusercontent.com/112398757/213287022-89a2cc06-e1dd-49c0-a770-be7ca019ebac.JPG)
 
 
 Lataamisen jälkeen avaa VirtualBox ja paina kohtaa New.

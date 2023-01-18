@@ -126,5 +126,18 @@ Ensimmäisen komennon mentyä läpi voit laittaa seuraavan, kun terminaali näyt
 ![terminaali3](https://user-images.githubusercontent.com/112398757/213294900-669b3c94-8840-4c9c-a643-8e6ac4110d1e.JPG)
 
 
+Seuraavaksi lisäasetuksia, jolla saat näytön pysyvästi suurempaan kokoon. Aikaisempi säätö helpotti Debianin asennusta. Mene Devices kohtaan näytöllä ja valitse sieltä Insert Guest Additions CD image...
+Avaa VBox_GAs_7... ja terminaali ja siirry oikeaan hakemistoon terminaalissa kirjoittamalla siihen cd /media/*/VBox*:
 
+![optional](https://user-images.githubusercontent.com/112398757/213295759-a54d3f44-61fb-4e84-83eb-e00f07a180ee.JPG)
+
+
+Kirjoita seuraavaksi terminaaliin sudo bash VBoxLinuxAdditions.run. Tämän suoritettuasi joudut uudelleen käynnistämään koneen. Mene Applicationsin kautta Log out kohdasta ja paina Restart.
+
+![optional2](https://user-images.githubusercontent.com/112398757/213296451-b280962e-fdf6-4922-bf9f-ef22a13e281d.JPG)
+
+
+Näiden toimenpiteiden jälkeen näytön koko on muuttunut:
+
+![optional3](https://user-images.githubusercontent.com/112398757/213296547-6dd43ec7-560e-46d7-a9d0-9e0895e41255.JPG)
 

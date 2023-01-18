@@ -5,12 +5,14 @@ Linux course reports
 
 Install Debian 11-Bullseye virtual machine in VirtulBox
 
-*Kone:*
+### *Kone:*
 - Lenovo IdeaPad S340
 - OS Windows 10
 - AMD Ryzen 7 3700U with Radeon Vega Mobile Gfx 
 - RAM 8Gt
 
 ### Asennus
+
+Lataa Debian 11-Bullseye [Debianin sivulta](https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/current-live/amd64/iso-hybrid/).
 
 

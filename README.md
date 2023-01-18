@@ -127,7 +127,7 @@ Ensimmäisen komennon mentyä läpi voit laittaa seuraavan, kun terminaali näyt
 
 
 Seuraavaksi lisäasetuksia, jolla saat näytön pysyvästi suurempaan kokoon. Aikaisempi säätö helpotti Debianin asennusta. Mene Devices kohtaan näytöllä ja valitse sieltä Insert Guest Additions CD image...
-Avaa VBox_GAs_7... ja terminaali ja siirry oikeaan hakemistoon terminaalissa kirjoittamalla siihen cd /media/\*/VBox\*:
+Avaa VBox_GAs_7... ja terminaali ja siirry oikeaan hakemistoon terminaalissa kirjoittamalla siihen cd /media/\*/VBox\*
 
 ![optional](https://user-images.githubusercontent.com/112398757/213295759-a54d3f44-61fb-4e84-83eb-e00f07a180ee.JPG)
 

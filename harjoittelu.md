@@ -124,3 +124,124 @@ sudo systemctl start postgresql
 sudo -u postgres createdb alisa
 sudo -u postgres createuser alisa
 ```
+
+### Djano
+
+>asennus
+
+```
+sudo apt-get update
+sudo apt-get install virtualenv python3-pip
+mkdir django
+cd django
+virtualenv -p python3 --system-site-packages env/
+source env/bin/activate
+which pip
+micro requirements.txt
+	micron sisään kirjoita: django
+pip install -r requirements.t
+```
+>Versio/admin
+
+```
+django-admin --version
+which django-admin
+```
+>Projektin luonti
+
+```
+django-admin startproject alisaco
+cd alisaco
+ls
+./manage.py runserver #NOT FOR PRODUCTION
+./manage.py makemigrations
+./manage.py migrate
+```
+>superuser ja appi
+
+```
+./manage.py createsuperuser
+./manage.py appi
+micro alisaco/settings.py
+micro bms/models.py
+```
+>models.py sisään
+```
+# Create your models here.
+class Haloo(models.Model):
+    name = models.CharField(max_length=200)
+```
+```
+./manage.py makemigrations
+./manage.py migrate
+```
+```
+micro haloo/admin.py
+
+from django.contrib import admin
+from . import models
+
+# Register your models here.
+admin.site.register(models.Haloo)
+```
+>envistä pois
+```
+deactivate
+```
+
+### Tuotantoasennus
+
+```
+mkdir -p publicwsgi/alisaco/static
+echo "Jaaha." |tee publicwsgi/alisaco/static/index.html
+sudoedit /etc/apache2/sites-available/alisaco.conf
+```
+> alisaco.conf-tiedostoon hakemistopolku
+```
+<VirtualHost *:80>
+        Alias /static/ /home/alisa/publicwsgi/alisaco/static/
+        <Directory /home/alisa/publicwsgi/alisaco/static/>
+                Require all granted
+        </Directory>
+</VirtualHost>
+```
+>Käyttöön ottaminen
+
+```
+sudo a2ensite alisaco.conf
+sudo a2dissite frontpage.conf
+ls /etc/apache2/sites-enabled
+/sbin/apache2ctl configtest
+sudo systemctl restart apache2
+```
+
+```
+sudo apt-get update
+sudo apt-get -y install virtualenv
+cd
+cd publicwsgi/
+virtualenv -p python3 --system-site-packages env
+source env/bin/activate
+which pip
+micro requirements.txt
+pip install -r requirements.txt
+django-admin --version
+deactivate
+rm -r alisaco/
+ls
+source env/bin/activate
+django-admin startproject alisaco
+sudoedit /etc/apache2/sites-available/alisaco.conf
+sudo apt-get -y install libapache2-mod-wsgi-py3
+/sbin/apache2ctl configtest
+sudo systemctl restart apache2
+curl -s localhost|grep title
+curl -sI localhost|grep Server
+cd
+cd publicwsgi/alisaco/
+micro alisaco/settings.py 
+touch alisaco/wsgi.py 
+curl -s localhost|grep title
+micro alisaco/settings.py 
+./manage.py collectstatic
+```

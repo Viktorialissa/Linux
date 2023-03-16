@@ -42,3 +42,11 @@
   pwd
   micro index.html
   ```
+
+## Luo uusi käyttäjä
+
+```
+sudo adduser user
+```
+
+Käyttäjän vaihto `su user`

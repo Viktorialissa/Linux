@@ -51,4 +51,62 @@ sudo adduser user
 
 Käyttäjän vaihto `su user`
 
+### kotisivu käyttäjälle
+
+```
+whoami
+cd
+ls
+pwd
+mkdir public_html
+cd public_html/
+pwd
+micro index.html
+```
+
+### HTML5-sivu
+
+```
+su user
+micro public_html/index.html
+```
+
+>HTML käyttäjälle alisa /~alisa
+```
+<!doctype html>
+<html>
+<head>
+	<title>Alisa Page</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<h1>Alisa's Test Page</h1>
+	<p>Let's test UTF-8 with "päivää"</p>
+</body>
+</html>
+```
+
+### Apachelle etusivu
+
+      sudoedit /etc/apache2/sites-available/frontpage.conf 
+
+```
+<VirtualHost *:80>
+        DocumentRoot /home/alisa/public_sites
+        <Directory /home/alisa/public_sites/>
+                require all granted
+        </Directory>
+</VirtualHost>
+```
+sudo a2ensite frontpage.conf
+sudo a2dissite 000-default.conf
+sudo systemctl restart apache2
+
+cd
+mkdir public_sites 
+micro index.html
+sudo systemctl restart apache2
+
+index.html väärässä paikkaa joten siirto okeaan:
+mv index.html /home/alisa/public_sites/index.html
 

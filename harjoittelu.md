@@ -50,3 +50,5 @@ sudo adduser user
 ```
 
 Käyttäjän vaihto `su user`
+
+

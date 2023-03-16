@@ -115,3 +115,12 @@ sudo systemctl restart apache2
 index.html väärässä paikkaa joten siirto okeaan:
 mv index.html /home/alisa/public_sites/index.html
 ```
+
+### Tietokanta
+
+```
+sudo apt-get install postgresql
+sudo systemctl start postgresql
+sudo -u postgres createdb alisa
+sudo -u postgres createuser alisa
+```

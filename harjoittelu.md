@@ -90,6 +90,8 @@ micro public_html/index.html
 
       sudoedit /etc/apache2/sites-available/frontpage.conf 
 
+>nanossa asetukset:
+
 ```
 <VirtualHost *:80>
         DocumentRoot /home/alisa/public_sites
@@ -97,6 +99,9 @@ micro public_html/index.html
                 require all granted
         </Directory>
 </VirtualHost>
+```
+>terminaalissa jatkuu:
+
 ```
 sudo a2ensite frontpage.conf
 sudo a2dissite 000-default.conf
@@ -109,4 +114,4 @@ sudo systemctl restart apache2
 
 index.html väärässä paikkaa joten siirto okeaan:
 mv index.html /home/alisa/public_sites/index.html
-
+```
